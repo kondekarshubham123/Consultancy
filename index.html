@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mrinal Ghodke - Income Tax Consultant</title>
 <style>
- body {
+  body {
     background-color: #ffffff; /* White background */
     color: #000000; /* Black text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -59,8 +59,9 @@
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    max-width: 600px;
+    max-width: 400px; /* Adjusted for smaller screens */
     box-sizing: border-box;
+    color: #ffffff; /* White text */
   }
   .close {
     color: #ffffff;
@@ -100,28 +101,6 @@
     font-weight: bold;
     padding: 12px 20px;
   }
-  /* Style for WhatsApp button */
-  .whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #25D366; /* WhatsApp green */
-    color: #ffffff;
-    text-align: center;
-    line-height: 60px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  .whatsapp-button img {
-    width: 100%; /* Ensure the image covers the entire circle */
-    height: 100%;
-    object-fit: cover; /* Cover the circle without stretching the image */
-    border-radius: 50%; /* Keep the image circular */
-  }
   /* Style for footer */
   footer {
     background-color: #333333; /* Dark background for footer */
@@ -144,12 +123,31 @@
       padding: 8px;
       margin-bottom: 10px;
     }
-    .whatsapp-button {
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      font-size: 20px;
+    .modal-content {
+      width: 90%; /* Adjust modal width for smaller screens */
     }
+  }
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366; /* WhatsApp green */
+    color: #ffffff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .whatsapp-button img {
+    width: 100%; /* Ensure the image covers the entire circle */
+    height: 100%;
+    object-fit: cover; /* Cover the circle without stretching the image */
+    border-radius: 50%; /* Keep the image circular */
   }
 </style>
 </head>
@@ -186,7 +184,7 @@
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <form id="consultationForm" action="mailto:yourmail@gmail.com" method="post" enctype="text/plain">
+      <form id="consultationForm" action="mailto:yourmail@gmail.com?subject=Need%20Consultation" method="post" enctype="text/plain">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
         <label for="mobile">Mobile Number:</label>
